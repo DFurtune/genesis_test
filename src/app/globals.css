@@ -1,8 +1,37 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@tailwind utilities;
+
+@layer utilities {
+  .touch-pan-y {
+    touch-action: pan-y;
+  }
+
+  .select-none {
+    user-select: none;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-kaisei: var(--font-family-kaisei);
+  --font-poppins: var(--font-family-poppins);
 }
 
 @theme inline {
@@ -23,4 +52,22 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.kaisei {
+  font-family: var(--font-kaisei);
+}
+
+.poppins {
+  font-family: var(--font-poppins);
+}
+
+.bg-gradient-orange {
+  background: #aa580d;
+  background: linear-gradient(
+    45deg,
+    rgba(170, 88, 13, 1) 0%,
+    rgba(226, 143, 17, 1) 50%,
+    rgba(170, 88, 13, 1) 100%
+  );
 }
