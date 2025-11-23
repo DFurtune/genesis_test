@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/booking-session',
-  assetPrefix: '/booking-session/',
+  basePath: '/genesis_test',
+  assetPrefix: '/genesis_test/',
 };
 
 module.exports = nextConfig;
